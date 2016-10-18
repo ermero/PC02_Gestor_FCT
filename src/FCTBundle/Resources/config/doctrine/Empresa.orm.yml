@@ -1,0 +1,32 @@
+FCTBundle\Entity\Empresa:
+    type: entity
+    table: null
+    repositoryClass: FCTBundle\Repository\EmpresaRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            length: 255
+            unique: true
+        direccion:
+            type: string
+            length: 255
+        cp:
+            type: string
+            length: '5'
+        telefono1:
+            type: string
+            length: 255
+        telefono2:
+            type: string
+            length: '15'
+            nullable: true
+        fechaCreacion:
+            type: date
+            column: fecha_creacion
+    lifecycleCallbacks: {  }
